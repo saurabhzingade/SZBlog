@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home Page
+{% endblock title %}
+{% block homeactive %} active {% endblock homeactive %}
+
+{% block body %}
+<div class="container">
+    <div class="jumbotron my-3">
+        <h1 class="display-4">Welcome to SZ-BLOG!!</h1>
+        <p class="lead">Simple Blog Website.</p>
+        <hr class="my-4">
+        <p>You can go to the blogs here!</p>
+        <a class="btn btn-primary btn-lg" href="/blog" role="button">Go to Blog</a>
+    </div>
+</div>
+
+<div class="container" style="background-color:rgba(227, 238, 230, 0.705);">
+
+    <h2>Popular Blogposts</h2>
+    <div
+        class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 my-4 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">World</strong>
+            <h3 class="mb-0">Live now!</h3>
+            <div class="mb-1 text-muted">{{current_datetime}}</div>
+            <p class="card-text mb-auto">There are many Blogs available now!
+                </p>
+            <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}
